@@ -2,11 +2,10 @@ import type { Post } from '@/types'
 import Link from 'next/link'
 import Image from 'next/image'
 import clsx from 'clsx'
+import { getPosts } from '@/api/posts'
 
-const Posts = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/posts`)
-  const parsedRes = await res.json()
-  const posts = parsedRes.posts ?? []
+const Posts = () => {
+  const posts = getPosts() ?? []
 
   return (
       <section className="py-12">

@@ -1,12 +1,9 @@
 import type { Post } from '@/types'
+import { getPostById, getPosts } from '@/api/posts'
 import MarkdownViewer from '@/components/markdown/MarkdownViewer'
 
-const postsEndpoint = `${process.env.NEXT_PUBLIC_SITE_URL}/api/posts`
-
 export async function generateStaticParams() {
-  const res = await fetch(postsEndpoint)
-  const parsedRes = await res.json()
-  const posts = parsedRes.posts ?? []
+  const posts = getPosts() ?? []
 
   return posts.map((post: Post) => ({
     postId: post.id.toString(),
@@ -15,8 +12,7 @@ export async function generateStaticParams() {
 
 const Page = async ({ params }: { params: Promise<{ postId: string }> }) => {
   const { postId } = await params
-  const res = await fetch(`${postsEndpoint}/${postId}`)
-  const post = await res.json() as Post
+  const post = getPostById(postId)
 
   if (!post) return <span>No encontrado</span>
 
