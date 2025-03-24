@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Guía Completa de HTML y su Semántica",
+      "description": "Aprende los fundamentos de HTML para crear la estructura de tus páginas web.",
+      "imageUrl": "/posts/images/html.jpg",
+      "fileUrl": "/posts/post1.md",
+      "slug": "guia-html"
+    },
+    {
+      "id": 2,
+      "title": "Guía de CSS",
+      "description": "Domina los estilos con CSS para crear diseños atractivos y responsivos.",
+      "imageUrl": "/posts/images/css.png",
+      "fileUrl": "/posts/post2.md",
+      "slug": "guia-css"
+    },
+    {
+      "id": 3,
+      "title": "Guía de Docker",
+      "description": "Aprende lo basico sobre como funciona docker y sus grandes ventajas para usarlo en la industria del desarrolo.",
+      "imageUrl": "/posts/images/docker.jpg",
+      "fileUrl": "/posts/post3.md",
+      "slug": "guia-docker"
+    }
+  ]
+}
