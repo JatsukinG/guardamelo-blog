@@ -1,191 +1,279 @@
-# Guía Completa de HTML y su Semántica
+# Guía Esencial de HTML y su Semántica
 
-HTML (HyperText Markup Language) es el lenguaje de marcado utilizado para la creación de páginas web. Su propósito
-principal es estructurar el contenido mediante etiquetas. En esta guía, exploraremos las etiquetas HTML y su semántica
-para mejorar la accesibilidad y el SEO.
+## 1. ¿Qué es HTML?
 
----
+HTML (HyperText Markup Language) es el lenguaje estándar para crear páginas web. Es un lenguaje de **marcado** que define la **estructura** del contenido web mediante un sistema de **etiquetas**. HTML no es un lenguaje de programación, sino un lenguaje que le dice al navegador cómo mostrar el contenido.
 
-## 1. ¿Qué es HTML y por qué es importante?
+## 2. Etiquetas HTML
 
-HTML es un lenguaje de marcado que define la estructura de una página web mediante etiquetas. Es el esqueleto sobre el
-cual se aplican estilos con CSS y funcionalidades con JavaScript.
+Las etiquetas son el componente fundamental de HTML. Son fragmentos de código que definen elementos en la página web.
 
-**¿Por qué es importante la semántica en HTML?**
-La semántica en HTML permite que los navegadores, motores de búsqueda y herramientas de accesibilidad interpreten
-correctamente el contenido. Por ejemplo, usar `<h1>` para títulos principales y `<p>` para párrafos ayuda a que el
-contenido sea más comprensible.
+### Estructura de una etiqueta:
 
----
+```html
+<nombre-etiqueta>Contenido</nombre-etiqueta>
+```
 
-## 2. Estructura Básica de un Documento HTML
+- **Etiqueta de apertura**: `<nombre-etiqueta>`
+- **Contenido**: Texto u otras etiquetas anidadas
+- **Etiqueta de cierre**: `</nombre-etiqueta>`
 
-Todo documento HTML comienza con la siguiente estructura:
+### Ejemplos de etiquetas básicas:
+
+```html
+<h1>Esto es un título</h1>
+<p>Esto es un párrafo.</p>
+```
+
+### Etiquetas sin cierre (autocierre):
+
+Algunas etiquetas no contienen contenido y se cierran en sí mismas:
+
+```html
+<img src="imagen.jpg">
+<br>
+<hr>
+```
+
+En HTML5, es recomendable incluir la barra de cierre:
+
+```html
+<img src="imagen.jpg" />
+<br />
+<hr />
+```
+
+## 3. Estructura Básica de un Documento HTML
+
+Todo documento HTML tiene esta estructura básica:
 
 ```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Una guía completa sobre HTML y su semántica">
-  <title>Mi Primera Página</title>
+  <title>Título de la página</title>
 </head>
 <body>
-<h1>Hola, Mundo!</h1>
-<p>Bienvenido a mi página web.</p>
+  <h1>Mi primera página web</h1>
+  <p>Bienvenido a mi sitio.</p>
 </body>
 </html>
 ```
 
-**Explicación:**
+### Elementos fundamentales:
 
-- `<!DOCTYPE html>`: Define el tipo de documento y la versión de HTML.
-- `<html lang="es">`: Indica el inicio del documento y el idioma (español).
-- `<head>`: Contiene metadatos y enlaces a recursos externos.
-- `<meta charset="UTF-8">`: Define la codificación de caracteres.
-- `<meta name="viewport">`: Permite el diseño responsivo.
-- `<meta name="description">`: Ayuda al SEO describiendo el contenido de la página.
-- `<title>`: Título que aparece en la pestaña del navegador.
-- `<body>`: Contiene el contenido visible de la página.
+#### `<!DOCTYPE html>`
+Declaración que define la versión de HTML (en este caso HTML5).
 
----
+#### `<html>`
+Elemento raíz que contiene todo el documento HTML.
+- El atributo `lang` especifica el idioma del contenido.
 
-## 3. Encabezados en HTML
+#### `<head>`
+Contiene metadatos (información sobre el documento) y enlaces a recursos externos. **No es visible** para los usuarios, pero es esencial para:
+- Definir el título de la página (pestaña del navegador)
+- Especificar la codificación de caracteres
+- Enlazar hojas de estilo (CSS) y scripts (JavaScript)
+- Proporcionar información para motores de búsqueda
 
-HTML proporciona seis niveles de encabezados, desde `<h1>` hasta `<h6>`, donde `<h1>` es el más importante.
+#### `<body>`
+Contiene todo el contenido visible de la página web:
+- Texto
+- Imágenes
+- Enlaces
+- Formularios
+- Tablas
+- Y todos los elementos que ve el usuario
 
+## 4. Semántica en HTML
+
+La semántica en HTML se refiere a utilizar las etiquetas que describen correctamente el significado del contenido, no solo su apariencia.
+
+### ¿Por qué es importante la semántica?
+
+- **Accesibilidad**: Ayuda a las tecnologías de asistencia (lectores de pantalla)
+- **SEO**: Mejora el posicionamiento en buscadores
+- **Mantenimiento**: Hace que el código sea más legible y fácil de mantener
+- **Compatibilidad**: Prepara tu sitio para futuras tecnologías web
+
+### Ejemplos de etiquetas semánticas vs. no semánticas:
+
+No semántico:
 ```html
-<h1>Título Principal</h1>
-<h2>Subtítulo</h2>
-<h3>Encabezado de sección</h3>
-<h4>Subsección</h4>
-<h5>Detalle menor</h5>
-<h6>Nota adicional</h6>
+<div class="header">
+  <div class="navegacion">...</div>
+</div>
+<div class="contenido-principal">...</div>
+<div class="pie-pagina">...</div>
 ```
 
-**Reglas de uso:**
-
-- Solo debe haber un `<h1>` por página.
-- Los encabezados ayudan a estructurar el contenido y mejoran el SEO.
-- Se recomienda no saltar niveles (por ejemplo, de `<h1>` a `<h3>` directamente).
-
----
-
-## 4. Etiquetas Semánticas en HTML
-
-Las etiquetas semánticas describen el significado del contenido, mejorando la accesibilidad y el SEO.
-
-### a) Estructura Principal
-
+Semántico:
 ```html
-
 <header>
-  <h1>Mi Blog</h1>
-  <nav>
-    <ul>
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Sobre Mí</a></li>
-      <li><a href="#">Contacto</a></li>
-    </ul>
-  </nav>
+  <nav>...</nav>
 </header>
+<main>...</main>
+<footer>...</footer>
 ```
 
-- `<header>`: Contiene encabezados y menús de navegación.
-- `<nav>`: Define la navegación principal del sitio.
+## 5. Etiquetas Semánticas Principales
 
-### b) Contenido Principal
+### Estructura de página:
 
 ```html
+<header>
+  <!-- Cabecera del sitio: logo, título principal, navegación -->
+</header>
+
+<nav>
+  <!-- Menú de navegación principal -->
+</nav>
 
 <main>
+  <!-- Contenido principal único de la página -->
+  
   <article>
-    <h2>Título del Artículo</h2>
-    <p>Este es el contenido principal del artículo.</p>
+    <!-- Contenido independiente y autocontenido (blog, noticia) -->
   </article>
+  
   <section>
-    <h3>Sección Importante</h3>
-    <p>Información adicional relevante.</p>
+    <!-- Agrupación temática de contenido -->
   </section>
+  
+  <aside>
+    <!-- Contenido relacionado pero no esencial (publicidad, enlaces) -->
+  </aside>
 </main>
-```
 
-- `<main>`: Contiene el contenido principal de la página.
-- `<article>`: Representa un contenido independiente (blogs, noticias).
-- `<section>`: Agrupa contenido relacionado.
-
-### c) Complementos y Pie de Página
-
-```html
-
-<aside>
-  <h3>Publicidad</h3>
-  <p>Espacio para anuncios o contenido relacionado.</p>
-</aside>
 <footer>
-  <p>&copy; 2025 Mi Blog. Todos los derechos reservados.</p>
+  <!-- Pie de página: información de contacto, copyright, enlaces -->
 </footer>
 ```
 
-- `<aside>`: Contiene contenido relacionado (publicidad, enlaces adicionales).
-- `<footer>`: Contiene información de pie de página (créditos, enlaces legales).
-
----
-
-## 5. Atributos en HTML
-
-Las etiquetas HTML pueden tener atributos que proporcionan información adicional.
+### Elementos de texto:
 
 ```html
+<h1>Título principal (solo uno por página)</h1>
+<h2>Subtítulo</h2>
+<h3>Título de sección</h3>
+<!-- h4, h5, h6 para niveles adicionales -->
+
+<p>Párrafo de texto.</p>
+
+<strong>Texto importante</strong>
+<em>Texto enfatizado</em>
+
+<blockquote>Cita de otra fuente</blockquote>
+
+<ul>
+  <li>Elemento de lista no ordenada</li>
+  <li>Otro elemento</li>
+</ul>
+
+<ol>
+  <li>Primer elemento ordenado</li>
+  <li>Segundo elemento</li>
+</ol>
+```
+
+## 6. Atributos en HTML
+
+Los atributos proporcionan información adicional sobre las etiquetas y modifican su comportamiento. Se colocan en la etiqueta de apertura.
+
+### Sintaxis de los atributos:
+
+```html
+<etiqueta nombre-atributo="valor">Contenido</etiqueta>
+```
+
+### Atributos globales (funcionan en casi todas las etiquetas):
+
+```html
+<div id="identificador-unico" class="clase1 clase2" style="color: blue;">
+  Este elemento tiene varios atributos.
+</div>
+```
+
+- **id**: Identificador único para el elemento (solo uno por página)
+- **class**: Categoriza elementos (útil para CSS)
+- **style**: Aplica estilos CSS directamente
+- **title**: Muestra información adicional al pasar el cursor
+
+### Atributos específicos por etiqueta:
+
+```html
+<!-- Enlaces -->
 <a href="https://ejemplo.com" target="_blank">Visitar sitio</a>
-<img src="imagen.jpg" alt="Descripción de la imagen">
+
+<!-- Imágenes -->
+<img src="imagen.jpg" alt="Descripción de la imagen" width="300" height="200">
+
+<!-- Formularios -->
+<input type="email" placeholder="Ingresa tu email" required>
 ```
 
-- `href`: Especifica la URL en enlaces `<a>`.
-- `target="_blank"`: Abre el enlace en una nueva pestaña.
-- `src`: Indica la fuente de una imagen.
-- `alt`: Texto alternativo para mejorar accesibilidad y SEO.
+### Atributos booleanos:
 
----
-
-## 6. Etiquetas de Texto
+Son atributos que no necesitan un valor; su presencia indica "verdadero":
 
 ```html
-<p>Este es un párrafo.</p>
-<strong>Texto en negrita</strong>
-<em>Texto en cursiva</em>
-<mark>Texto resaltado</mark>
-<blockquote>Una cita importante.</blockquote>
+<input type="checkbox" checked>
+<button disabled>No disponible</button>
 ```
 
-- `<p>`: Define un párrafo.
-- `<strong>`: Negrita con significado importante.
-- `<em>`: Texto en cursiva con énfasis.
-- `<mark>`: Texto resaltado.
-- `<blockquote>`: Cita de otro autor.
+## 7. Elementos Básicos e Importantes
 
----
-
-## 7. Formularios en HTML
+### Enlaces:
 
 ```html
+<a href="pagina.html">Enlace interno</a>
+<a href="https://ejemplo.com">Enlace externo</a>
+<a href="#seccion">Enlace a sección en la misma página</a>
+<a href="mailto:email@ejemplo.com">Enlace para email</a>
+```
 
-<form action="/enviar" method="POST">
+### Imágenes:
+
+```html
+<img src="ruta/imagen.jpg" alt="Descripción accesible de la imagen">
+```
+
+### Formularios:
+
+```html
+<form action="/procesar" method="POST">
   <label for="nombre">Nombre:</label>
   <input type="text" id="nombre" name="nombre" required>
+  
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email">
+  
+  <label for="mensaje">Mensaje:</label>
+  <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+  
   <button type="submit">Enviar</button>
 </form>
 ```
 
-- `<form>`: Define un formulario.
-- `<input>`: Campo de entrada.
-- `<label>`: Etiqueta para un campo.
-- `<button>`: Botón de envío.
+## 8. Buenas Prácticas en HTML
 
---
+1. **Indentación y formato**: Mantén un código limpio y bien organizado
+2. **Semántica correcta**: Usa las etiquetas según su propósito
+3. **Validación**: Verifica que tu HTML cumpla con los estándares
+4. **Accesibilidad**: Usa atributos `alt` en imágenes y etiquetas correctas
+5. **Etiquetas en minúsculas**: Aunque HTML no es sensible a mayúsculas, es mejor práctica usar minúsculas
+6. **Comillas dobles**: Para los valores de los atributos
+
+## 9. Recursos para Aprender Más
+
+- [MDN Web Docs](https://developer.mozilla.org/es/docs/Web/HTML)
+- [W3Schools HTML Tutorial](https://www.w3schools.com/html/)
+- [HTML5 Doctor](http://html5doctor.com/) (para profundizar en semántica)
+- [Can I Use](https://caniuse.com/) (para verificar compatibilidad)
 
 ## Conclusión
 
-HTML es la base de toda página web. Usar etiquetas semánticas mejora la estructura, accesibilidad y SEO. Con una buena
-comprensión de HTML, es fácil avanzar en CSS y JavaScript. 🚀
+HTML proporciona la estructura fundamental de cualquier página web. Al comprender las etiquetas, atributos y principios semánticos, podrás crear sitios web más accesibles, mejor posicionados en buscadores y más fáciles de mantener.
+
+Recuerda que HTML trabaja junto con CSS (para estilos) y JavaScript (para interactividad) para crear experiencias web completas. ¡Feliz aprendizaje! 🚀
