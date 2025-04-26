@@ -1,6 +1,6 @@
 'use client'
 import clsx from 'clsx'
-// import DarkModeToggleBtn from '@/layouts/main/navbar/DarkModeToggleBtn'
+import DarkModeToggleBtn from '@/layouts/main/navbar/DarkModeToggleBtn'
 import Link from 'next/link'
 import { FaLaptopCode, FaUser } from 'react-icons/fa'
 
@@ -26,7 +26,7 @@ const MainNavbar = () => {
               Cognitus
             </span>
             <FaUser className="inline"/>
-            {/*<DarkModeToggleBtn/>*/}
+            <DarkModeToggleBtn/>
           </div>
         </div>
       </header>

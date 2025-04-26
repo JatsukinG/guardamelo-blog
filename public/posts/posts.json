@@ -23,6 +23,22 @@
       "imageUrl": "/posts/images/docker.jpg",
       "fileUrl": "/posts/post3.md",
       "slug": "guia-docker"
+    },
+    {
+      "id": 4,
+      "title": "React, primeros pasos",
+      "description": "Inicia en React usando herramientas modernas como Yarn y Vite. Aprende sobre el Virtual DOM, gestores de paquetes y cómo estructurar tu primer proyecto.",
+      "imageUrl": "/posts/images/react.png",
+      "fileUrl": "/posts/post4.md",
+      "slug": "guia-react-primeros-pasos"
+    },
+    {
+      "id": 5,
+      "title": "React desde cero: Conceptos fundamentales",
+      "description": "Guía esencial para entender componentes funcionales, useState y los fundamentos clave que todo desarrollador de React debe conocer.",
+      "imageUrl": "/posts/images/react-fundamentals.jpg",
+      "fileUrl": "/posts/post5.md",
+      "slug": "guia-fundamentos-react"
     }
   ]
 }
