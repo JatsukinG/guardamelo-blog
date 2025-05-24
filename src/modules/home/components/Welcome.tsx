@@ -7,10 +7,10 @@ const Welcome = () => {
           <span className="inline-block text-8xl text-purple-600">
             <FaLaptopCode/>
           </span>
-          <h2 className="mt-8 text-3xl md:text-5xl font-extrabold text-gray-800 dark:text-white mb-4">
+          <h2 className="mt-8 text-3xl md:text-5xl font-extrabold text-neutral-800 dark:text-white mb-4">
             Aprende <span className="text-purple-600">programación</span> de manera simple
           </h2>
-          <p className="text-base md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          <p className="text-base md:text-xl text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto">
             Bienvenido a Guardamelo Blog, tu recurso definitivo para aprender diferentes tecnologías
             de programación con guías detalladas y fáciles de seguir.
           </p>

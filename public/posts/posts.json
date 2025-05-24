@@ -39,6 +39,14 @@
       "imageUrl": "/posts/images/react-fundamentals.jpg",
       "fileUrl": "/posts/post5.md",
       "slug": "guia-fundamentos-react"
+    },
+    {
+      "id": 6,
+      "title": "Guía de JavaScript - Fundamentos Básicos",
+      "description": "Una guía práctica y directa que cubre los conceptos fundamentales de JavaScript: tipos de datos primitivos y compuestos, ciclos, funciones y operadores de comparación.",
+      "imageUrl": "/posts/images/javascript.png",
+      "fileUrl": "/posts/post6.md",
+      "slug": "guia-fundamentos-javascript"
     }
   ]
 }

@@ -16,7 +16,7 @@ const Posts = () => {
                   href={`/posts/${post.id}`}
                   className={clsx([
                     'group bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300',
-                    'dark:bg-gray-800 hover:cursor-pointer hover:shadow-lg hover:-translate-y-1',
+                    'dark:bg-neutral-800 hover:cursor-pointer hover:shadow-lg hover:-translate-y-1',
                   ])}
 
               >
@@ -29,10 +29,10 @@ const Posts = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="mb-2 text-xl font-bold text-gray-800 group-hover:text-purple-600 dark:text-white">
+                  <h3 className="mb-2 text-xl font-bold text-neutral-800 group-hover:text-purple-600 dark:text-white">
                     {post.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400">{post.description}</p>
+                  <p className="text-neutral-600 dark:text-neutral-400">{post.description}</p>
                 </div>
               </Link>
           ))}

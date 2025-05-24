@@ -13,7 +13,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <html lang="en">
       <body className="antialiased">
       <MainNavbar/>
-      <main className="mt-[60px] bg-white dark:bg-gray-950 min-h-screen">
+      <main className="mt-[60px] bg-neutral-100 dark:bg-neutral-900 min-h-screen">
         {children}
       </main>
       <Footer/>

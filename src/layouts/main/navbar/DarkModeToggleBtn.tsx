@@ -33,8 +33,8 @@ const DarkModeToggleBtn = () => {
       <button
           id="dark-mode-toggle-btn"
           className={clsx([
-            'p-2 text-xl bg-gray-200 rounded-full duration-300',
-            'hover:cursor-pointer dark:bg-gray-700 hover:bg-gray-300 hover:dark:bg-neutral-600',
+            'p-2 text-xl bg-neutral-200 rounded-full duration-300',
+            'hover:cursor-pointer dark:bg-neutral-700 hover:bg-neutral-300 hover:dark:bg-neutral-600',
           ])}
           onClick={() => toggleDarkMode()}
       >
