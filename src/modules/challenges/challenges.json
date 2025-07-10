@@ -1,0 +1,263 @@
+[
+  {
+    "id": "1",
+    "title": "Suma de dos números",
+    "description": "Crea una función que reciba dos números y devuelva su suma.",
+    "longDescription": "Debes implementar una función que reciba dos números enteros y devuelva el resultado de sumarlos. Esta función debe funcionar correctamente con números positivos, negativos y cero.",
+    "difficulty": "easy",
+    "instructions": "function sumar(a, b) { /* tu código aquí */ }",
+    "testArgs": [
+      [
+        2,
+        3
+      ],
+      [
+        -1,
+        5
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "expectedResults": [
+      5,
+      4,
+      0
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Número par o impar",
+    "description": "Escribe una función que determine si un número es par o impar.",
+    "longDescription": "Crea una función que reciba un número entero y devuelva la cadena 'par' si el número es par, o 'impar' si el número es impar.",
+    "difficulty": "easy",
+    "instructions": "function esPar(numero) { /* tu código aquí */ }",
+    "testArgs": [
+      [
+        2
+      ],
+      [
+        7
+      ],
+      [
+        0
+      ]
+    ],
+    "expectedResults": [
+      "par",
+      "impar",
+      "par"
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Palíndromo",
+    "description": "Crea una función que verifique si una palabra es un palíndromo.",
+    "longDescription": "Una palabra es un palíndromo si se lee igual de izquierda a derecha que de derecha a izquierda. La función debe ignorar mayúsculas y espacios.",
+    "difficulty": "medium",
+    "instructions": "function esPalindromo(palabra) { /* tu código aquí */ }",
+    "testArgs": [
+      [
+        "oso"
+      ],
+      [
+        "casa"
+      ],
+      [
+        "reconocer"
+      ]
+    ],
+    "expectedResults": [
+      true,
+      false,
+      true
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Factorial",
+    "description": "Escribe una función que calcule el factorial de un número.",
+    "longDescription": "Implementa una función que calcule el factorial de un número entero no negativo. El factorial de n es el producto de todos los números enteros positivos hasta n.",
+    "difficulty": "medium",
+    "instructions": "function factorial(n) { /* tu código aquí */ }",
+    "testArgs": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        5
+      ]
+    ],
+    "expectedResults": [
+      1,
+      1,
+      120
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Fibonacci",
+    "description": "Devuelve el n-ésimo número de la secuencia de Fibonacci.",
+    "longDescription": "Escribe una función que reciba un número n y devuelva el n-ésimo número de la secuencia de Fibonacci. La secuencia comienza con 0 y 1, y cada número siguiente es la suma de los dos anteriores.",
+    "difficulty": "medium",
+    "instructions": "function fibonacci(n) { /* tu código aquí */ }",
+    "testArgs": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        6
+      ]
+    ],
+    "expectedResults": [
+      0,
+      1,
+      8
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Contar vocales",
+    "description": "Crea una función que cuente las vocales en una cadena de texto.",
+    "longDescription": "Tu función debe contar cuántas vocales (a, e, i, o, u) aparecen en una cadena. La función debe ser insensible a mayúsculas y minúsculas.",
+    "difficulty": "easy",
+    "instructions": "function contarVocales(texto) { /* tu código aquí */ }",
+    "testArgs": [
+      [
+        "Hola"
+      ],
+      [
+        "Javascript"
+      ],
+      [
+        "AEIOU"
+      ]
+    ],
+    "expectedResults": [
+      2,
+      3,
+      5
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Invertir cadena",
+    "description": "Escribe una función que invierta una cadena de texto.",
+    "longDescription": "Crea una función que tome una cadena como entrada y devuelva una nueva cadena con los caracteres en orden inverso.",
+    "difficulty": "easy",
+    "instructions": "function invertir(texto) { /* tu código aquí */ }",
+    "testArgs": [
+      [
+        "hola"
+      ],
+      [
+        "abc"
+      ],
+      [
+        "12345"
+      ]
+    ],
+    "expectedResults": [
+      "aloh",
+      "cba",
+      "54321"
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Eliminar duplicados",
+    "description": "Dada una lista, elimina los elementos duplicados.",
+    "longDescription": "Implementa una función que tome un array y devuelva un nuevo array sin elementos duplicados, manteniendo el orden original.",
+    "difficulty": "medium",
+    "instructions": "function eliminarDuplicados(arr) { /* tu código aquí */ }",
+    "testArgs": [
+      [
+        [
+          1,
+          2,
+          2,
+          3
+        ]
+      ],
+      [
+        [
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      [
+        [
+          1,
+          2,
+          3,
+          1
+        ]
+      ]
+    ],
+    "expectedResults": [
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        4
+      ],
+      [
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Anagrama",
+    "description": "Verifica si dos palabras son anagramas entre sí.",
+    "longDescription": "Crea una función que determine si dos palabras son anagramas, es decir, si contienen las mismas letras con la misma frecuencia, sin importar el orden.",
+    "difficulty": "hard",
+    "instructions": "function sonAnagramas(palabra1, palabra2) { /* tu código aquí */ }",
+    "testArgs": [
+      [
+        "roma",
+        "amor"
+      ],
+      [
+        "casa",
+        "saca"
+      ],
+      [
+        "perro",
+        "gato"
+      ]
+    ],
+    "expectedResults": [
+      true,
+      true,
+      false
+    ]
+  },
+  {
+    "id": "10",
+    "title": "FizzBuzz",
+    "description": "Imprime los números del 1 al 100. Para múltiplos de 3 imprime 'Fizz', para múltiplos de 5 imprime 'Buzz', y para ambos 'FizzBuzz'.",
+    "longDescription": "Este clásico ejercicio consiste en imprimir los números del 1 al 100, pero reemplazando los múltiplos de 3 por 'Fizz', los múltiplos de 5 por 'Buzz', y los múltiplos de ambos por 'FizzBuzz'.",
+    "difficulty": "easy",
+    "instructions": "function fizzBuzz() { /* tu código aquí */ }",
+    "testArgs": [
+      []
+    ],
+    "expectedResults": [
+      []
+    ]
+  }
+]
