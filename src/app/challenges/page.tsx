@@ -4,16 +4,23 @@ import clsx from 'clsx'
 // import { Button } from '@/components'
 import challenges from '@/modules/challenges/challenges.json'
 
-const difficulties = {
-  'easy': {
+type Difficulty = "easy" | "medium" | "hard"
+
+interface DifficultyObj {
+  color: string
+  translation: string
+}
+
+const difficulties: Record<Difficulty, DifficultyObj>  = {
+  easy: {
     color: 'bg-green-600',
     translation: 'Fácil',
   },
-  'medium': {
+  medium: {
     color: 'bg-yellow-600',
     translation: 'Medio',
   },
-  'hard': {
+  hard: {
     color: 'bg-red-600',
     translation: 'Difícil',
   },
@@ -47,10 +54,10 @@ const Page = () => {
                       <span
                           className={clsx([
                             'text-xs font-medium px-2 py-1 rounded-full text-white',
-                            difficulties[challenge.difficulty].color,
+                            difficulties[challenge.difficulty as Difficulty].color,
                           ])}
                       >
-                        {difficulties[challenge.difficulty].translation}
+                        {difficulties[challenge.difficulty as Difficulty].translation}
                       </span>
                     </div>
                     {/*<Button*/}
