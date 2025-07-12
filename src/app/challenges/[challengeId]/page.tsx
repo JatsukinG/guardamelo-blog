@@ -1,7 +1,7 @@
 import { CodeEditor } from '@/components'
 import challenges from '@/modules/challenges/challenges.json'
 
-const Page = async ({ params }: { params: Promise<{ postId: string }> }) => {
+const Page = async ({ params }: { params: Promise<{ challengeId: string }> }) => {
   const { challengeId } = await params
   const challenge = challenges.find(challenge => challenge.id == challengeId)
 
