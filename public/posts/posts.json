@@ -47,6 +47,14 @@
       "imageUrl": "/posts/images/javascript.png",
       "fileUrl": "/posts/post6.md",
       "slug": "guia-fundamentos-javascript"
+    },
+      {
+      "id": 7,
+      "title": "Django con GraphQL vs Node.js con REST",
+      "description": "Django con GraphQL y Node.js con Express y REST, analizando ventajas, desventajas, retos y cuándo elegir cada uno. Una guía práctica para tomar la mejor decisión según tu proyecto.",
+      "imageUrl": "/posts/images/node_vs_django.png",
+      "fileUrl": "/posts/post7.md",
+      "slug": "node-vs-django"
     }
   ]
 }
